@@ -36,7 +36,7 @@ ssize_t in_buf(inf_o *inf, char **b, size_t *l)
 				inf->cmdb = b;
 			}
 		}
-	 }
+	}
 	return (s);
 }
  /**
@@ -55,13 +55,13 @@ ssize_t get_input(inf_o *inf)
 	 s = in_buf(inf, &b, &l);
 	if (l)
 	{
-		 j = i;
-		 p = b + i;
-		 chchain(inf, b, &j, i, l);
+		j = i;
+		p = b + i;
+		chchain(inf, b, &j, i, l);
 		while (j < l)
 		{
-			 i = l = 0;
-			 inf->cmdb_type = NORM;
+			i = l = 0;
+			inf->cmdb_type = NORM;
 		}
 		 *bs = p;
 		return (_strlen(p));
@@ -75,16 +75,16 @@ ssize_t get_input(inf_o *inf)
   * @b: char var
   * @i: var
   * Return: s
-  */ 
+  */
 ssize_t read_b(inf_o *inf, char *b, size_t *i)
 {
 	 ssize_t s = 0;
 
 	if (*i)
 		return (0);
-	 s = read(inf->readfd, b, RB_SIZE);
+	s = read(inf->readfd, b, RB_SIZE);
 	if (s >= 0)
-		 *i = s;
+		*i = s;
 	return (s);
 }
  /**
@@ -94,19 +94,19 @@ ssize_t read_b(inf_o *inf, char *b, size_t *i)
   * @l: var
   * Return: x
   */
-int _getline (inf_o *inf, char **pr, size_t *l)
+int _getline(inf_o *inf, char **pr, size_t *l)
 {
 	 static char b[RB_SIZE];
-	 static size_t i , ls;
+	 static size_t i, ls;
 	 size_t j;
 	 ssize_t s = 0, x = 0;
 	 char *p = NULL, *np = NULL, *c;
 
 	 p = *pr;
 	if (p && l)
-		 x = *l;
+		x = *l;
 	if (i == ls)
-		 i = ls = 0;
+		i = ls = 0;
 	 s = read_b(inf, b, &ls);
 	if (s == -1 || (s == 0 && ls == 0))
 		return (-1);
@@ -114,9 +114,9 @@ int _getline (inf_o *inf, char **pr, size_t *l)
 
 	 j = c ? 1 + (unsigned int)(c - b) : ls;
 
-	np = _realloc(p , x, x ? x + j : j + 1);
+	np = _realloc(p, x, x ? x + j : j + 1);
 	if (!np)
-		return (p ? free(p), -1: -1);
+		return (p ? free(p), -1 : -1);
 	if (x)
 		_strncat(np, b + i, j + i);
 	else
@@ -130,14 +130,14 @@ int _getline (inf_o *inf, char **pr, size_t *l)
 		*l = x;
 	*pr = p;
 	return (x);
- }
+}
  /**
   * sinthand - void func
   * @si: var
   */
- void sinthand(__attribute__((unused))int si)
- {
+void sinthand(__attribute__((unused))int si)
+{
 	 _puts("\n");
 	 _puts("$ ");
 	 _putchar (BUFSH);
- }
+}

@@ -18,7 +18,7 @@ size_t l_len(const lists_t *head)
 /**
  * l_to_s - func
  * @head: struct
- * Retrun: tr
+ * Return: tr
  */
 char **l_to_s(lists_t *head)
 {
@@ -49,7 +49,11 @@ char **l_to_s(lists_t *head)
 	tr[i] = NULL;
 	return (tr);
 }
-
+/**
+ * p_list - struct
+ * @head: struct
+ * Return: j
+ */
 size_t p_list(const lists_t *head)
 {
 	size_t j = 0;
@@ -87,7 +91,7 @@ lists_t *node_starts_with(lists_t *n, char *pre, char c)
 	return (NULL);
 }
 /**
- * get_node - struct
+ * get_node_i - struct
  * @head: struct
  * @n: struct
  * Return: -1

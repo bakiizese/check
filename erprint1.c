@@ -84,7 +84,7 @@ int p_d(int in, int f)
  * @m: int var
  * @bs: buf
  * @f: int var
- * @Return: p
+ * Return: p
  */
 char *conv_n(long int m, int bs, int f)
 {

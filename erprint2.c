@@ -32,7 +32,7 @@ int _eputchar(char c)
 	return (1);
 }
 /**
- * _pufd - func
+ * _putfd - func
  * @c: char var
  * @f: int var
  * Return: 1

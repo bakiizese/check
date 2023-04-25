@@ -50,7 +50,7 @@ int w_hist(inf_o *inf)
 /**
  * r_hist - func
  * @inf: struct
- * Retunr: inf
+ * Return: inf
  */
 int r_hist(inf_o *inf)
 {

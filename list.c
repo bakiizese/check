@@ -30,7 +30,13 @@ lists_t *add_node(lists_t **h, const char *str, int n)
 	*h = new;
 	return (new);
 }
-
+/**
+ * add_node_end - struct
+ * @h: var
+ * @str: var
+ * @n: var
+ * Return: 0
+ */
 lists_t *add_node_end(lists_t **h, const char *str, int n)
 {
 	lists_t *new, *on;
@@ -63,7 +69,11 @@ lists_t *add_node_end(lists_t **h, const char *str, int n)
 		*h = new;
 	return (new);
 }
-
+/**
+ * p_list_str - struct
+ * @h: struct
+ * Return: 0
+ */
 size_t p_list_str(const lists_t *h)
 {
 	size_t j = 0;
@@ -75,7 +85,6 @@ size_t p_list_str(const lists_t *h)
 		h = h->next;
 		j++;
 	}
-	
 	return (j);
 }
 /**

@@ -65,7 +65,7 @@ void chchain(inf_o *inf, char *b, size_t *p, size_t i, size_t l)
 }
 /**
  * re_alias - func
- * @inf - struct
+ * @inf: struct
  * Return: 1
  */
 int re_alias(inf_o *inf)

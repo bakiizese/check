@@ -36,10 +36,10 @@ int _strcmp(char *s1, char *s2)
 		return (*s1 < *s2 ? -1 : 1);
 }
 /**
- * _st_wi - func
+ * st_wi - func
  * @haystack: char var
  * @needle: char var
- * Retrun: haystack
+ * Return: haystack
  */
 char *st_wi(const char *haystack, const char *needle)
 {

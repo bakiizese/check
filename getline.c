@@ -39,11 +39,11 @@ ssize_t in_buf(inf_o *inf, char **b, size_t *l)
 	}
 	return (s);
 }
- /**
-  * get_input - func
-  * @inf: struct
-  * Return: s
-  */
+/**
+ * get_input - func
+ * @inf: struct
+ * Return: s
+ */
 ssize_t get_input(inf_o *inf)
 {
 	 static char *b;
@@ -69,13 +69,13 @@ ssize_t get_input(inf_o *inf)
 	*bs = b;
 	return (s);
 }
- /**
-  * read_b - func
-  * @inf: struct
-  * @b: char var
-  * @i: var
-  * Return: s
-  */
+/**
+ * read_b - func
+ * @inf: struct
+ * @b: char var
+ * @i: var
+ * Return: s
+ */
 ssize_t read_b(inf_o *inf, char *b, size_t *i)
 {
 	 ssize_t s = 0;
@@ -87,13 +87,13 @@ ssize_t read_b(inf_o *inf, char *b, size_t *i)
 		*i = s;
 	return (s);
 }
- /**
-  * _getline - func
-  * @inf: struct
-  * @pr: char var
-  * @l: var
-  * Return: x
-  */
+/**
+ * _getline - func
+ * @inf: struct
+ * @pr: char var
+ * @l: var
+ * Return: x
+ */
 int _getline(inf_o *inf, char **pr, size_t *l)
 {
 	 static char b[RB_SIZE];
@@ -131,10 +131,10 @@ int _getline(inf_o *inf, char **pr, size_t *l)
 	*pr = p;
 	return (x);
 }
- /**
-  * sinthand - void func
-  * @si: var
-  */
+/**
+ * sinthand - void func
+ * @si: var
+ */
 void sinthand(__attribute__((unused))int si)
 {
 	 _puts("\n");
